@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Fart Button</title>
+    <style>
+        /* .button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        } */
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        .button {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border-radius: 50%;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            padding: 10px 20px;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <button id="fartButton" class="button">Fart</button>
+    </div>
+
+    <script>
+        function playFartSound() {
+            const audio = new Audio('videoplayback.wav');
+            audio.play();
+
+            // Stop the sound after 2 seconds
+            setTimeout(() => {
+                audio.pause();
+                audio.currentTime = 0;
+            }, 2000);
+        }
+
+        document.getElementById('fartButton').addEventListener('click', playFartSound);
+    </script>
+</body>
+
+</html>
